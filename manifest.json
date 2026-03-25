@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Glossy",
   "version": "1.0",
   "description": "Browser extension to define words on selection",
@@ -21,18 +21,16 @@
   "background": {
     "scripts": [
       "dist/background.js"
-    ],
-    "persistent": false
+    ]
   },
   "content_scripts": [
     {
       "matches": [
-        "*://*/*"
+        "<all_urls>"
       ],
       "js": [
         "dist/content.js"
-      ],
-      "type": "module"
+      ]
     }
   ]
 }

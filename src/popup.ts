@@ -1,5 +1,7 @@
 import { getSelectionRect } from "./selection-rect"
 import { createContainer } from "./shadow-container"
+import garamond from "../fonts/EBGaramond-VariableFont_wght.woff2"
+import garamondItalic from "../fonts/EBGaramond-Italic-VariableFont_wght.woff2"
 
 const WIDTH = 400
 
@@ -8,13 +10,6 @@ export const container = createContainer({
   style: `
     :host {
       all: initial;
-    }
-
-    @font-face {
-      font-family: "EB Garamond";
-      src: url("${browser.runtime.getURL("fonts/EBGaramond-VariableFont_wght.ttf")}");
-      font-style: normal;
-      font-weight: 400 800;
     }
 
     #popup {
@@ -40,6 +35,21 @@ export const container = createContainer({
     .example {
       font-style: italic;
       opacity: 0.5;
+    }
+  `,
+  globalStyle: `
+    @font-face {
+      font-family: "EB Garamond";
+      src: url("${garamond}") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "EB Garamond";
+      src: url("${garamondItalic}") format("woff2");
+      font-weight: 400 800;
+      font-style: italic;
     }
   `
 })
