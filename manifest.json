@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Glossy",
+  "version": "1.0",
+  "description": "Browser extension to define words on selection",
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "113"
+    }
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "dist/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "dist/content.js"
+      ],
+      "type": "module"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "glossy",
+  "version": "1.0.0",
+  "description": "Browser extension to define words on selection",
+  "scripts": {
+    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js && esbuild src/background.ts --bundle --outfile=dist/background.js",
+    "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --watch",
+    "gentypes": "npx openapi-typescript https://freedictionaryapi.com/api/v1/openapi.json -o src/types/api.d.ts"
+  },
+  "keywords": [],
+  "author": "d.budaragin@gmail.com",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^143.0.0",
+    "esbuild": "^0.27.4",
+    "openapi-typescript": "^7.13.0"
+  },
+  "dependencies": {
+    "lit": "^3.3.2"
+  }
+}

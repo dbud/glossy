@@ -1,0 +1,470 @@
+{
+  "word": "item",
+  "entries": [
+    {
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "partOfSpeech": "noun",
+      "pronunciations": [
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Received Pronunciation"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾəm]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾm̩]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈɑe.təm/",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "New Zealand"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "word": "items",
+          "tags": [
+            "plural"
+          ]
+        }
+      ],
+      "senses": [
+        {
+          "definition": "A distinct physical object.",
+          "tags": [],
+          "examples": [
+            "Tweezers are great for manipulating small items."
+          ],
+          "quotes": [
+            {
+              "text": "The San Juan market is Mexico City's most famous deli of exotic meats, where an adventurous shopper can hunt down hard-to-find critters […]. But the priciest items in the market aren't the armadillo steaks or even the bluefin tuna.",
+              "reference": "2013 July 26, Nick Miroff, “Mexico gets a taste for eating insects […] ”, in The Guardian Weekly, volume 189, number 7, page 32:"
+            }
+          ],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "(by extension, video games) An object that can be picked up for later use.",
+          "tags": [
+            "broadly"
+          ],
+          "examples": [],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "A line of text having a legal or other meaning; a separate particular in an account.",
+          "tags": [],
+          "examples": [
+            "the items in a bill",
+            "In response to the first item, we deny all wrongdoing."
+          ],
+          "quotes": [
+            {
+              "text": "Beyond being mere items of a legal code, they [the mitzvot] are the very basis of the relationship that God and the people Israel have established.",
+              "reference": "2001, David L. Lieber and Jules Harlow, Etz Hayim: Torah and Commentary, page 1143:"
+            }
+          ],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "(psychometrics) A question on a test, which may include its answers.",
+          "tags": [],
+          "examples": [
+            "The exam has 100 items, each of which includes a correct response and three distractors."
+          ],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "A matter for discussion in an agenda.",
+          "tags": [],
+          "examples": [
+            "The first item for discussion is the budget for next year's picnic."
+          ],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "(informal) Two people who are having a romantic or sexual relationship with each other.",
+          "tags": [
+            "informal"
+          ],
+          "examples": [
+            "Jack and Jill are an item."
+          ],
+          "quotes": [
+            {
+              "text": "Are we an item? Girl, quit playin' / \"We're just friends,\" what are you sayin'?",
+              "reference": "2010, Justin Bieber featuring Ludacris, Baby:"
+            }
+          ],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "A short article in a newspaper.",
+          "tags": [],
+          "examples": [
+            "an item concerning the weather"
+          ],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "(obsolete) A hint; an innuendo.",
+          "tags": [
+            "obsolete"
+          ],
+          "examples": [],
+          "quotes": [
+            {
+              "text": "A secret item was given to some of the bishops […] to absent themselves.",
+              "reference": "1655, Thomas Fuller, The Church-history of Britain; […], London: […] Iohn Williams […], →OCLC, (please specify |book=I to XI):"
+            }
+          ],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        },
+        {
+          "definition": "(India) Ellipsis of item girl.",
+          "tags": [
+            "India",
+            "abbreviation",
+            "alt of",
+            "ellipsis"
+          ],
+          "examples": [],
+          "quotes": [
+            {
+              "text": "In this chapter, we will attempt to trace the course of initiation into the classical arts, from the self-taught gyrations of Bollywood items to the serious rigours of a classical Indian dance form.",
+              "reference": "2017, Nandita Chaudhary, Pernille Hviid, Giuseppina Marsico, Resistance in Everyday Life: Constructing Cultural Experiences, page 246:"
+            }
+          ],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        }
+      ],
+      "synonyms": [
+        "article",
+        "object",
+        "thing",
+        "subject",
+        "topic",
+        "couple",
+        "test",
+        "assessment question"
+      ],
+      "antonyms": []
+    },
+    {
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "partOfSpeech": "verb",
+      "pronunciations": [
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Received Pronunciation"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾəm]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾm̩]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈɑe.təm/",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "New Zealand"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "word": "items",
+          "tags": [
+            "present",
+            "singular",
+            "third-person"
+          ]
+        },
+        {
+          "word": "iteming",
+          "tags": [
+            "participle",
+            "present"
+          ]
+        },
+        {
+          "word": "itemed",
+          "tags": [
+            "participle",
+            "past"
+          ]
+        },
+        {
+          "word": "itemed",
+          "tags": [
+            "past"
+          ]
+        }
+      ],
+      "senses": [
+        {
+          "definition": "(transitive) To make a note of.",
+          "tags": [
+            "transitive"
+          ],
+          "examples": [],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        }
+      ],
+      "synonyms": [],
+      "antonyms": []
+    },
+    {
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "partOfSpeech": "adverb",
+      "pronunciations": [
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Received Pronunciation"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾəm]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈaɪ̯.ɾm̩]",
+          "tags": [
+            "Canada",
+            "General American"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈɑe.təm/",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "General Australian"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "/ˈaɪ.təm/",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾəm]",
+          "tags": [
+            "New Zealand"
+          ]
+        },
+        {
+          "type": "ipa",
+          "text": "[ˈɑe̯.ɾm̩]",
+          "tags": [
+            "New Zealand"
+          ]
+        }
+      ],
+      "forms": [],
+      "senses": [
+        {
+          "definition": "likewise",
+          "tags": [
+            "not comparable"
+          ],
+          "examples": [],
+          "quotes": [],
+          "synonyms": [],
+          "antonyms": [],
+          "subsenses": []
+        }
+      ],
+      "synonyms": [],
+      "antonyms": []
+    }
+  ],
+  "source": {
+    "url": "https://en.wiktionary.org/wiki/item",
+    "license": {
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  }
+}
