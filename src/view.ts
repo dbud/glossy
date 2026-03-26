@@ -17,17 +17,43 @@ const viewEntry = ({ partOfSpeech, pronunciations, senses }: Entry) => html`
   <div class="entry">
     <div class="pos">${partOfSpeech}</div>
     <div class="pronunciations">
-      ${pronunciations.map(viewPronunciation)}
+      ${compressPronunciations(pronunciations).map(viewPronunciation)}
     </div>
     <ol class="senses">
       ${senses.map(viewSense)}
     </ol>
   </div>`
 
+function append<K extends string | number | symbol, V>(map: [K, V[]][], k: K, v: V) {
+  const idx = map.findIndex(e => e[0] === k)
+  if (idx >= 0)
+    map[idx][1].push(v)
+  else
+    map.push([k, [v]])
+}
+
 type Pronunciation = Entry["pronunciations"][number]
-const viewPronunciation = ({ text, tags }: Pronunciation) => html`
+
+type PronunciationVariants = {
+  variants: string[]
+  tags: string[]
+}
+
+function compressPronunciations(list: Pronunciation[]): PronunciationVariants[] {
+  const compressed: [string, Pronunciation[]][] = []
+  for (const p of list) {
+    const key = p.tags.join(':')
+    append(compressed, key, p)
+  }
+  return compressed.map(([_, vs]) => ({
+    tags: vs[0].tags,
+    variants: vs.map(v => v.text)
+  }))
+}
+
+const viewPronunciation = ({ tags, variants }: PronunciationVariants) => html`
   <div class="pronunciation">
-    <span class="text">${text}</span>
+    <span class="text">${variants.join(' ')}</span>
     <span class="tags">${tags.join(", ")}</span>
   </div>`
 

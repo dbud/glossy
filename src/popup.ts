@@ -24,17 +24,36 @@ export const container = createContainer({
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
       font-family: "EB Garamond";
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px;
+
+      max-height: 80vh;
+      overflow-y: scroll;
     }
 
     .word {
       font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .pos {
+      font-family: sans-serif;
     }
 
     .example {
       font-style: italic;
       opacity: 0.5;
+    }
+
+    .license, .tags {
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+
+    .license {
+      padding-top: 1rem;
     }
   `,
   globalStyle: `
