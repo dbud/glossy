@@ -7,7 +7,7 @@ let cache: Record<string, Definition> = {}
 browser.runtime.onMessage.addListener(async (message) => {
   if (message.type === "DEFINE") {
     const { word } = message
-    if (cache[word]) return word
+    if (cache[word]) return cache[word]
     try {
       const response = await fetch(
         `https://freedictionaryapi.com/api/v1/entries/en/${word}`
