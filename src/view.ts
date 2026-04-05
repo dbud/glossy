@@ -38,6 +38,7 @@ export function view(definition: Definition) {
     <style>${style}</style>
     <div class="word">${word}</div>
     <div class="entries">
+      ${entries.length === 0 && html`<p>No definitions found.</p>`}
       ${entries.map(viewEntry)}
     </div>
     <div class="license">${source.license.name}</div>`
