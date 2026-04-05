@@ -9,6 +9,7 @@ const { popup, open } = createPopup()
 async function define(text: string) {
   try {
     const definition = await browser.runtime.sendMessage({ type: "DEFINE", word: text })
+    window.getSelection()?.removeAllRanges()
     render(view(definition), popup)
     popup.scrollTop = 0
     open()

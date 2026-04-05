@@ -2,6 +2,10 @@ import { html } from "lit"
 import { Definition } from "./background"
 
 const style = `
+  .entries {
+    line-height: 1.3;
+  }
+
   .word {
     font-weight: 600;
     font-size: 1.5rem;
@@ -29,7 +33,6 @@ const style = `
 `
 
 export function view(definition: Definition) {
-  console.log(definition)
   const { word, entries, source } = definition
   return html`
     <style>${style}</style>

@@ -32,7 +32,7 @@ const style = `
     bottom: 0;
     left: 0;
     right: 0;
-    max-height: 80vh;
+    max-height: 50vh;
     overflow-y: scroll;
 
     transform: translateY(calc(100% + 10px));
