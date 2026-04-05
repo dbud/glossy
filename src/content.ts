@@ -10,6 +10,7 @@ async function define(text: string) {
   try {
     const definition = await browser.runtime.sendMessage({ type: "DEFINE", word: text })
     render(view(definition), popup)
+    popup.scrollTop = 0
     open()
   }
   catch (e) {
