@@ -1,10 +1,38 @@
 import { html } from "lit"
 import { Definition } from "./background"
 
+const style = `
+  .word {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pos {
+    font-family: sans-serif;
+  }
+
+  .example {
+    font-style: italic;
+    opacity: 0.5;
+  }
+
+  .license, .tags {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+
+  .license {
+    padding-top: 1rem;
+  }
+`
+
 export function view(definition: Definition) {
   console.log(definition)
   const { word, entries, source } = definition
   return html`
+    <style>${style}</style>
     <div class="word">${word}</div>
     <div class="entries">
       ${entries.map(viewEntry)}
