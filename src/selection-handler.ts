@@ -15,7 +15,7 @@ export function createSelectionHandler({
 }) {
   let lastText = ""
 
-  let forget = debounce(() => { lastText = "" }, forgetMs)
+  const forget = debounce(() => { lastText = "" }, forgetMs)
 
   return debounce((text) => {
     forget()

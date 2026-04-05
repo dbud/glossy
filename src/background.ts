@@ -2,7 +2,7 @@ import type { paths } from "./types/api"
 
 export type Definition = paths["/entries/{language}/{word}"]["get"]["responses"]["200"]["content"]["application/json; charset=utf-8"]
 
-let cache: Record<string, Definition> = {}
+const cache: Record<string, Definition> = {}
 
 browser.runtime.onMessage.addListener(async (message) => {
   if (message.type === "DEFINE") {

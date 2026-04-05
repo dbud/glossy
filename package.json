@@ -5,16 +5,21 @@
   "scripts": {
     "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --loader:.woff2=dataurl && esbuild src/background.ts --bundle --outfile=dist/background.js",
     "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --loader:.woff2=dataurl --watch",
-    "gentypes": "npx openapi-typescript https://freedictionaryapi.com/api/v1/openapi.json -o src/types/api.d.ts"
+    "gentypes": "npx openapi-typescript https://freedictionaryapi.com/api/v1/openapi.json -o src/types/api.d.ts",
+    "lint": "npx eslint src"
   },
   "keywords": [],
   "author": "d.budaragin@gmail.com",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/firefox-webext-browser": "^143.0.0",
     "esbuild": "^0.27.4",
-    "openapi-typescript": "^7.13.0"
+    "eslint": "^10.2.0",
+    "globals": "^17.4.0",
+    "openapi-typescript": "^7.13.0",
+    "typescript-eslint": "^8.58.0"
   },
   "dependencies": {
     "lit": "^3.3.2"
