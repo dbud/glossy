@@ -1,96 +1,73 @@
-import { getSelectionRect } from "./selection-rect"
-import { createContainer } from "./shadow-container"
-import garamond from "../fonts/EBGaramond-VariableFont_wght.woff2"
-import garamondItalic from "../fonts/EBGaramond-Italic-VariableFont_wght.woff2"
+import { html, render } from "lit";
+import { createShadow } from "./shadow-container"
 
-const WIDTH = 400
-
-export const container = createContainer({
-  containerId: 'popup',
-  style: `
-    :host {
-      all: initial;
-    }
-
-    #popup {
-      position: absolute;
-      z-index: 10000;
-      width: ${WIDTH}px;
-
-      background: #fff;
-      color: #000;
-      border: 1px solid #eee;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
-      font-family: "EB Garamond";
-      font-size: 16px;
-      padding: 12px;
-
-      max-height: 80vh;
-      overflow-y: scroll;
-    }
-
-    .word {
-      font-weight: 600;
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .pos {
-      font-family: sans-serif;
-    }
-
-    .example {
-      font-style: italic;
-      opacity: 0.5;
-    }
-
-    .license, .tags {
-      font-family: sans-serif;
-      font-size: 0.8rem;
-      opacity: 0.5;
-    }
-
-    .license {
-      padding-top: 1rem;
-    }
-  `,
-  globalStyle: `
-    @font-face {
-      font-family: "EB Garamond";
-      src: url("${garamond}") format("woff2");
-      font-weight: 400 800;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "EB Garamond";
-      src: url("${garamondItalic}") format("woff2");
-      font-weight: 400 800;
-      font-style: italic;
-    }
-  `
-})
-
-export function close() {
-  container.style.display = "none"
-}
-
-export function open() {
-  const rect = getSelectionRect()
-  if (!rect) return
-
-  const margin = 8
-
-  let top = rect.bottom + window.scrollY + margin
-  let left = rect.left + window.scrollX
-
-  if (left + WIDTH > window.innerWidth - margin) {
-    left = window.innerWidth - WIDTH - margin
+const style = `
+  :host {
+    all: initial;
   }
 
-  container.style.display = 'block'
-  container.style.top = `${top}px`
-  container.style.left = `${left}px`
+  #popup.is-open {
+    transform: translateY(0);
+  }
+
+  #popup {
+    // display: none;
+    position: fixed;
+    z-index: 10000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 80vh;
+    overflow-y: scroll;
+
+    transform: translateY(calc(100% + 10px));
+    transition: transform 0.25s ease-out;
+
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    font-family: "EB Garamond";
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .word {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pos {
+    font-family: sans-serif;
+  }
+
+  .example {
+    font-style: italic;
+    opacity: 0.5;
+  }
+
+  .license, .tags {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+
+  .license {
+    padding-top: 1rem;
+  }
+`
+
+export function createPopup() {
+  const root = createShadow();
+  render(html`
+    <style>${style}</style>
+    <div id="popup" />
+  `, root)
+  const popup = root.querySelector('#popup') as HTMLElement
+  return {
+    popup,
+    open: () => popup.classList.add('is-open'),
+    close: () => popup.classList.remove('is-open')
+  }
 }

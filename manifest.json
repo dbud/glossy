@@ -15,9 +15,7 @@
       "strict_min_version": "113"
     }
   },
-  "permissions": [
-    "contextMenus"
-  ],
+  "permissions": [],
   "background": {
     "scripts": [
       "dist/background.js"
