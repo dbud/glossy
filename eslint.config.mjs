@@ -13,6 +13,7 @@ export default defineConfig([
   tseslint.configs.recommended,
   {
     rules: {
+      quotes: ["error", "double", { avoidEscape: true }],
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }]
     }
   }

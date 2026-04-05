@@ -6,14 +6,29 @@ const style = `
     all: initial;
   }
 
-  #popup.is-open {
+  .is-open #backdrop {
+    display: block;
+  }
+
+  #backdrop {
+    z-index: 10000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .is-open #popup {
     transform: translateY(0);
   }
 
   #popup {
     // display: none;
     position: fixed;
-    z-index: 10000;
+    z-index: 10001;
     bottom: 0;
     left: 0;
     right: 0;
@@ -21,7 +36,7 @@ const style = `
     overflow-y: scroll;
 
     transform: translateY(calc(100% + 10px));
-    transition: transform 0.25s ease-out;
+    transition: transform 0.1s ease-in;
 
     background: #fff;
     color: #000;
@@ -31,18 +46,33 @@ const style = `
     font-size: 16px;
     padding: 12px;
   }
+
+  .scroll-lock {
+    overflow: hidden !important;
+  }
 `
 
 export function createPopup() {
-  const root = createShadow();
+  const shadow = createShadow();
   render(html`
     <style>${style}</style>
-    <div id="popup" />
-  `, root)
-  const popup = root.querySelector('#popup') as HTMLElement
-  return {
-    popup,
-    open: () => popup.classList.add('is-open'),
-    close: () => popup.classList.remove('is-open')
+    <div id="root">
+      <div id="backdrop"></div>
+      <div id="popup"></div>
+    </div>
+  `, shadow)
+  const root = shadow.querySelector("#root")
+  const popup = shadow.querySelector("#popup") as HTMLElement
+
+  const open = () => {
+    root.classList.add("is-open")
+    window.document.body.classList.add("is-open")
   }
+
+  const close = () => {
+    root.classList.remove("is-open")
+    window.document.body.classList.remove("is-open")
+  }
+
+  return { popup, open, close }
 }

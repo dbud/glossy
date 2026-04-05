@@ -70,7 +70,7 @@ type PronunciationVariants = {
 function compressPronunciations(list: Pronunciation[]): PronunciationVariants[] {
   const compressed: [string, Pronunciation[]][] = []
   for (const p of list) {
-    const key = p.tags.join(':')
+    const key = p.tags.join(":")
     append(compressed, key, p)
   }
   return compressed.map(([_, vs]) => ({
@@ -81,7 +81,7 @@ function compressPronunciations(list: Pronunciation[]): PronunciationVariants[] 
 
 const viewPronunciation = ({ tags, variants }: PronunciationVariants) => html`
   <div class="pronunciation">
-    <span class="text">${variants.join(' ')}</span>
+    <span class="text">${variants.join(" ")}</span>
     <span class="tags">${tags.join(", ")}</span>
   </div>`
 

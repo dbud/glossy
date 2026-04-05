@@ -17,7 +17,7 @@ export function createSelectionHandler({
 
   const forget = debounce(() => { lastText = "" }, forgetMs)
 
-  return debounce((text) => {
+  return debounce((text: string) => {
     forget()
     if (!text || text === lastText || text.length > maxLength) {
       cancel()
