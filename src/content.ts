@@ -2,9 +2,9 @@ import { render } from "lit"
 import { createPopup } from "./popup"
 import { createSelectionHandler } from "./selection-handler"
 import { error, view } from "./view"
-import { setupFonts } from "./fonts"
+import { setupStyles } from "./styles"
 
-const { popup, open, close } = createPopup()
+const { popup, open } = createPopup()
 
 async function define(text: string) {
   try {
@@ -20,11 +20,10 @@ async function define(text: string) {
 }
 
 const handleSelection = createSelectionHandler({
-  callback: define,
-  cancel: close,
+  callback: define
 })
 
-setupFonts()
+setupStyles()
 
 document.addEventListener("selectionchange", () => {
   const text = window.getSelection()?.toString().trim()

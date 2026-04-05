@@ -46,10 +46,6 @@ const style = `
     font-size: 16px;
     padding: 12px;
   }
-
-  .scroll-lock {
-    overflow: hidden !important;
-  }
 `
 
 export function createPopup() {
@@ -66,13 +62,15 @@ export function createPopup() {
 
   const open = () => {
     root.classList.add("is-open")
-    window.document.body.classList.add("is-open")
+    window.document.body.classList.add("scroll-lock")
   }
 
   const close = () => {
     root.classList.remove("is-open")
-    window.document.body.classList.remove("is-open")
+    window.document.body.classList.remove("scroll-lock")
   }
+
+  shadow.querySelector("#backdrop").addEventListener("click", close)
 
   return { popup, open, close }
 }
