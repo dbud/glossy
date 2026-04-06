@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Browser extension to define words on selection",
   "scripts": {
-    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js --loader:.woff2=dataurl && esbuild src/background.ts --bundle --outfile=dist/background.js",
-    "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --loader:.woff2=dataurl --watch",
+    "build": "esbuild src/content.ts --bundle --outfile=dist/content.js && esbuild src/background.ts --bundle --outfile=dist/background.js && web-ext build --overwrite-dest",
+    "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --watch",
     "gentypes": "npx openapi-typescript https://freedictionaryapi.com/api/v1/openapi.json -o src/types/api.d.ts",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src && web-ext lint"
   },
   "keywords": [],
   "author": "d.budaragin@gmail.com",
@@ -19,7 +19,8 @@
     "eslint": "^10.2.0",
     "globals": "^17.4.0",
     "openapi-typescript": "^7.13.0",
-    "typescript-eslint": "^8.58.0"
+    "typescript-eslint": "^8.58.0",
+    "web-ext": "^10.1.0"
   },
   "dependencies": {
     "lit": "^3.3.2"
