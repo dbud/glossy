@@ -5,6 +5,18 @@ const style = `
   :host {
     all: initial;
     font-size: 16px;
+
+    --bg: 255 255 255;
+    --text: #000;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :host {
+      --bg: 25 25 25;
+      --text: #fff;
+      --shadow: rgba(0, 0, 0, 0.7);
+    }
   }
 
   .is-open #backdrop {
@@ -19,7 +31,7 @@ const style = `
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(var(--bg) / 0.7);
   }
 
   .is-open #popup {
@@ -38,9 +50,9 @@ const style = `
     transform: translateY(calc(100% + 10px));
     transition: transform 0.1s ease-in;
 
-    background: #fff;
-    color: #000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: rgb(var(--bg));
+    color: var(--text);
+    box-shadow: 0 0 10px var(--shadow);
 
     padding: 1em;
     font-family: "EB Garamond";
