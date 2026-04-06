@@ -1,8 +1,9 @@
 import { render } from "lit"
 import { createPopup } from "./popup"
-import { createSelectionHandler } from "./selection-handler"
 import { error, view } from "./view"
 import { setupStyles } from "./styles"
+import { debounce } from "./debounce"
+import { onLongPress } from "./long-press"
 
 const { popup, open } = createPopup()
 
@@ -21,13 +22,17 @@ async function define(text: string) {
   }
 }
 
-const handleSelection = createSelectionHandler({
-  callback: define
-})
-
 setupStyles()
+
+let selection: string = ""
+const handleSelection = debounce((text: string) => { selection = text })
 
 document.addEventListener("selectionchange", () => {
   const text = window.getSelection()?.toString().trim()
   handleSelection(text)
+})
+
+onLongPress(() => {
+  if (!selection || selection.length > 60) return
+  define(selection)
 })

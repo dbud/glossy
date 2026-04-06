@@ -33,12 +33,13 @@ const style = `
 `
 
 export function view(definition: Definition) {
+  console.log(definition)
   const { word, entries, source } = definition
   return html`
     <style>${style}</style>
     <div class="word">${word}</div>
     <div class="entries">
-      ${entries.length === 0 && html`<p>No definitions found.</p>`}
+      ${entries.length === 0 ? html`<p>No definitions found.</p>` : null}
       ${entries.map(viewEntry)}
     </div>
     <div class="license">${source.license.name}</div>`
