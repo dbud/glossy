@@ -4,6 +4,7 @@ import { createShadow } from "./shadow-container"
 const style = `
   :host {
     all: initial;
+    font-size: 16px;
   }
 
   .is-open #backdrop {
@@ -26,7 +27,6 @@ const style = `
   }
 
   #popup {
-    // display: none;
     position: fixed;
     z-index: 10001;
     bottom: 0;
@@ -42,9 +42,8 @@ const style = `
     color: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
+    padding: 1em;
     font-family: "EB Garamond";
-    font-size: 16px;
-    padding: 12px;
   }
 `
 

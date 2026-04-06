@@ -8,8 +8,8 @@ const style = `
 
   .word {
     font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 0.6rem;
+    font-size: 2em;
+    margin-bottom: 0.5em;
   }
 
   .pos {
@@ -23,12 +23,12 @@ const style = `
 
   .license, .tags {
     font-family: sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     opacity: 0.5;
   }
 
   .license {
-    padding-top: 1rem;
+    padding-top: 1em;
   }
 `
 
