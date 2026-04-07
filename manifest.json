@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Glossy",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Browser extension to define words on selection",
   "icons": {
     "32": "images/icon.png",

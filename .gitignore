@@ -2,3 +2,7 @@ dist
 node_modules
 .DS_Store
 web-ext-artifacts
+.env
+.ignore
+*.pxd
+.amo-upload-uuid

@@ -1,12 +1,13 @@
 {
   "name": "glossy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browser extension to define words on selection",
   "scripts": {
     "build": "esbuild src/content.ts --bundle --outfile=dist/content.js && esbuild src/background.ts --bundle --outfile=dist/background.js && web-ext build --overwrite-dest",
     "watch": "esbuild src/content.ts --bundle --outfile=dist/content.js --watch",
     "gentypes": "npx openapi-typescript https://freedictionaryapi.com/api/v1/openapi.json -o src/types/api.d.ts",
-    "lint": "npx eslint src && web-ext lint"
+    "lint": "npx eslint src && web-ext lint",
+    "sign": "npx dotenv -e .env -- sh -c 'npx web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET --channel listed --amo-metadata=amo-metadata.json'"
   },
   "keywords": [],
   "author": "d.budaragin@gmail.com",
