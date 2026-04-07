@@ -3,6 +3,10 @@
   "name": "Glossy",
   "version": "1.0",
   "description": "Browser extension to define words on selection",
+  "icons": {
+    "32": "images/icon.png",
+    "64": "images/icon@2x.png"
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "glossy@d_bud",
